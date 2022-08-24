@@ -56,9 +56,10 @@ function styles(event) {
 			plug.fixes({preset: 'safe'}),
 			
 			// Analyse //
-			plug.doiuse(doiuse_conf),
+			// Отключен из-за назойливого окна
+			// plug.doiuse(doiuse_conf),
 			// Working: Yes
-			// Setted up: No
+			// Setted up: +-
 
 
 

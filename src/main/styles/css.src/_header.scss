@@ -1,4 +1,122 @@
 // Header
-header {
-	
+
+.header {
+	z-index: 1;
+	height: 100vh;
+	@include adaptive-value('padding-top', 100, 120, 1);
+	@include adaptive-value('padding-top', 120, 140, 2);
+	overflow: hidden;
+
+	#content {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .header__intro
+	&__intro {
+		display: block;
+		margin-right: 50px;
+	}
+	// .header__title
+	&__title {
+		display: inline;
+		font-size: 140px;
+		line-height: 100%;
+	}
+	// .header__marked
+	&__highlited {
+		display: inline-block;
+		line-height: inherit;
+	}
+	// .header__title-link
+	&__title-link {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 2.5em;
+		margin-left: 2em;
+
+		@include fx-arrow();
+	}
+	// .header__arrow
+	&__arrow {}
+	// .header__decoration
+	&__decoration {
+		z-index: 4;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-34%);
+
+		.decoration__elem {		
+			margin: 0 40px;
+			&:fist-of-type {
+				margin-left: 0;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+			
+		}
+	}
+	// .header__preview
+	&__preview-slider {
+		
+
+		.preview-slider__tape {
+			
+		}
+	}
 }
+.highlited {
+	color: $Orange;
+}
+.btn {
+	background-color: $Orange;
+	border-radius: 30px;
+	overflow: hidden;
+	// padding: 28px 40px;
+	@include adaptive-value('padding-top', 10, 20, 1);
+	@include adaptive-value('padding-top', 20, 28, 2);
+	@include adaptive-value('padding-bottom', 10, 20, 1);
+	@include adaptive-value('padding-bottom', 20, 28, 2);
+	@include adaptive-value('padding-left', 20, 30, 1);
+	@include adaptive-value('padding-left', 30, 40, 2);
+	@include adaptive-value('padding-right', 20, 30, 1);
+	@include adaptive-value('padding-right', 30, 40, 2);
+	color: #FDFBFA;
+
+	&__arrow {
+		display: inline-block;
+		vertical-align: middle;
+		transition: transform .15s ease-in 0s;
+		margin-left: 30px;
+	}
+}
+.arrow {
+}
+.preview-slider {
+	display: flex;
+	max-height: 100%;
+	overflow: hidden;
+	margin-left: auto;
+
+	// .preview-slider__tape
+	&__tape {
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		height: 500%;
+	}
+	// .preview__link
+	&__link {
+		display: block;
+		height: 20%;
+	}
+	// .preview__img
+	&__img {
+		// height: 100%;
+		width: auto;
+		height: 20%;
+	}
+}
+@include DecorationBlockColor($ThemeColor_Green, header__decoration);

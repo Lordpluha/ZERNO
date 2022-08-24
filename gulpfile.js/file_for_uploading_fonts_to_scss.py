@@ -26,6 +26,10 @@ fonts_types = ['.otf', '.ttf', '.woff', '.woff2', '.eot', '.eot?#iefix']
 
 print("______ file_for_uploading_fonts_to_scss.py ______")
 
+w_f = open(file_css, 'w')
+w_f.write('// Fonts file\n\n')
+w_f.close()
+
 for dirs, folder, files in os.walk(path):
     # Dir of current font
     dirs = dirs.split('\\')
@@ -83,17 +87,12 @@ for dirs, folder, files in os.walk(path):
     # print(final_fonts)
     # ______________________________________________
 
-
-    w_f = open(file_css, 'w')
-    w_f.write('// Fonts file\n\n')
-    w_f.close()
-
     path = os.path.join('..', 'fonts')
 
     for i in final_fonts:
         for a in i:
             if a not in fonts_types:
-
+                
                 a_f = open(file_css, 'a')
                 a_f.write('// '+str(a)+'\n')
                 a_f.write('@font-face {\n')
@@ -110,10 +109,7 @@ for dirs, folder, files in os.walk(path):
                         else:
                             if c == 0:
                                 a_f.write('    src: ')
-
                             c+=1
-                            
-
                             if b == '.eot?#iefix':
                                 a_f.write('url("{0}") format("embedded-opentype"),'.format(os.path.join(path, a+b)))
 
@@ -152,6 +148,8 @@ print('Saved in: ', file_css)
 
 """ 
 Использование скрипта:
+!!!ВНИМАНИЕ!!!
+* Шрифты должны распологаться в корневой папке fonts для корректного подключения в этой версии
  - Запустите
  - Укажите папку web-страницы
  - Убедитесь в корректности отработки скрипта

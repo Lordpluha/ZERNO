@@ -20,7 +20,13 @@ module.exports = {
 		'calc',
 		'object-fit',
 		'user-select-none',
-		'wordwrap'
+		'wordwrap',
+		'css-fixed',
+		'css-sel3',
+		'inline-block',
+		'border-radius',
+		'multicolumn',
+		'rem'
 	]
 
 }

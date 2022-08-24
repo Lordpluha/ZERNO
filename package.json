@@ -1,7 +1,7 @@
 {
-  "name": "devgulp",
+  "name": "ZERNO.layout",
   "version": "1.0.0",
-  "description": "Создание нового gulpfile на основе современных тендеций в WebDev",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
@@ -9,23 +9,12 @@
     "start": "gulp",
     "build": "gulp build"
   },
-  "resolutions": {
-    "glob-parent": "^6.0.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Lordpluha/DevGulp.git"
-  },
   "author": "Lordpluha",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Lordpluha/DevGulp/issues"
-  },
   "browserslist": [
     "last 5 versions",
     "> 1%"
   ],
-  "homepage": "https://github.com/Lordpluha/DevGulp#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "browser-sync": "^2.27.5",

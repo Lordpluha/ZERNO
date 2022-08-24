@@ -1,4 +1,98 @@
 // Aside
-aside {
-	
+.aside {
+	width: 100%;
+	#content {
+		display: flex;
+		justify-content: flex-start;
+	}
+}
+.distribution {
+	margin: 200px 0;
+	// .distribution__leftside
+	&__leftside {
+		width: 50%;
+	}
+	// .distribution__title
+	&__title {}
+	// .distribution__paragraph
+	&__paragraph {
+		margin-top: 60px;
+		color: black;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 32px;
+		line-height: 39px;
+	}
+	// .distribution__form
+	&__form {}
+}
+.distribution-form {
+	&:hover {
+		cursor: initial;
+	}
+	&>* {
+		display: block;
+	}
+	// .distribution-form__label
+	&__label {
+		display: inline-block;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 24px;
+		
+		&[for="politics"] {
+			margin-top: 40px;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&::before {
+				display: inline-block;
+				content: '';
+				vertical-align: top;
+				width: 30px;
+				height: 30px;
+				background-color: $ThemeColor_Green;
+				border-radius: 10px;
+				margin-right: 10px;
+				transition: none;
+			}
+		}
+	}
+	// .distribution-form__email
+	&__email {
+		margin-top: 10px;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 24px;
+		color: #FDFBFA;
+		width: 400px;
+		background-color: $ThemeColor_Green;
+		padding: 10px 20px;
+		border-radius: 30px;
+		&::placeholder {
+			color: #FDFBFA;
+		}
+	}
+	// .distribution-form__checkbox
+	&__checkbox {
+		display: none;
+		&:checked + label[for="politics"]::before {
+			background-image: url(../../img/aside/check.min.webp);
+			background-repeat: no-repeat;
+			background-size: 60%;
+			background-position: center center;
+		}
+	}
+	// .distribution-form__link
+	&__link {
+		font-size: inherit;
+	}
+	// .distribution-form__submit-button
+	&__submit-button {
+		margin-top: 40px;
+	}
 }

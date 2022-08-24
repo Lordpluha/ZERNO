@@ -49,7 +49,7 @@ $.pages 		  =	JSON.parse(
 // Current page
 $.start_page 	  = 'main';
 // OS Panel on/off
-$.OpenServer_conn = false;
+$.OpenServer_conn = true;
 // Using 'php' only with OpenServer_conn = true!!! (php/html)
 $.main_file_type  = 'html'
 // Server port
@@ -57,7 +57,7 @@ $.port 			  = 8282;
 // Proxy (OS Panel)
 $.proxy 		  = $.Project_name;
 // Https on/off
-$.https 		  = false;
+$.https 		  = true;
 // Certificates dir (working only with https = true)
 $.CertDir		  = './certificates'
 // debug || info

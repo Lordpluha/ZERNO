@@ -40,3 +40,42 @@
 		$AnimDelayV: $AnimDelayV+$DelayCoof;
 	}
 }
+
+// Использовать для родителя!!!
+@mixin fx-arrow() {
+	&:hover {
+		.btn__arrow {
+			transform: translateX(100px);
+		}
+	}
+}
+
+@mixin DecorationBlockColor($DecorationColor, $class) {
+	.#{$class} {
+		// .decoration__elem
+		.decoration__elem {
+			// .decoration__elem-v1
+			&-v1 {
+				div {
+					background-color: $DecorationColor;
+				}
+			}
+			// .decoration__elem-v2
+			&-v2 {
+				div {
+					border: 5px solid $DecorationColor;
+					div {
+						border: none;
+						background-color: $DecorationColor;
+					}
+				}
+			}
+			// .decoration__elem-v3
+			&-v3 {
+				div {
+					background-color: $DecorationColor;
+				}
+			}
+		}
+	}
+}
