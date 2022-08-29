@@ -69,7 +69,7 @@ img {
   font-family: Ethna-Demo;
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/ethna-Demo.otf) format("opentype")
+  src: url(../fonts/Ethna-Demo.otf) format("opentype")
 }
 @media only screen and (max-width:1440px) {
   .header #content,
