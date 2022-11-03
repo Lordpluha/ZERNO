@@ -1,6 +1,8 @@
 // Aside
 .aside {
 	width: 100%;
+	display: none;
+	
 	#content {
 		display: flex;
 		justify-content: flex-start;

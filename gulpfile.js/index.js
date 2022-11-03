@@ -49,7 +49,7 @@ $.pages 		  =	JSON.parse(
 // Current page
 $.start_page 	  = 'main';
 // OS Panel on/off
-$.OpenServer_conn = true;
+$.OpenServer_conn = false;
 // Using 'php' only with OpenServer_conn = true!!! (php/html)
 $.main_file_type  = 'html'
 // Server port

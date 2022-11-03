@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-	
 	// Content upploading effect
-	var AnimItems = document.getElementsByClassName('._anim-elem');
+	var AnimItems = document.getElementsByClassName('_anim-elem');
 
 	function offset(element) {
 		var rect = element.getBoundingClientRect(),
@@ -30,15 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			if ((window.pageYOffset > AnimItemOffset - animItemPoint) && window.pageYOffset < (AnimItemOffset + AnimItemHeight))
 			{
 				
-				AnimItem.classList.add('_active__fx');
+				AnimItem.classList.add('_active-fx');
 			}
 		}
 	}
 
-	window.addEventListener('scroll', animOnScroll());
-
+	window.addEventListener('scroll', animOnScroll);
 	setTimeout(animOnScroll, 300);
-
-	console.log('JS succesfully initializated!');
-
 });

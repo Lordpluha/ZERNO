@@ -35,9 +35,10 @@ html {
 	за адаптивность шрифтов
 	всей страницы
 	*/
-	@include adaptive-value('font-size', 10, 15, 1);
+	// font-style: 20px;
+	@include adaptive-value('font-size', 10, 17, 1);
 	@include adaptive-value('font-size', 15, 20, 2);
-	// @include adaptive-value('font-size', 15, 25, 3);
+	// @include adaptive-value('font-size', 10, 25, 3);
 	&.lock {
 		overflow: hidden;
 	}
@@ -63,8 +64,8 @@ body {
 
 
 // Красивая загрузка элементов (см. так же в script.js)
-$AnimTime: 10s;
-$AnimDelay: 0s;
+$AnimTime: .6s;
+$AnimDelay: .1s;
 ._anim-elem {
 	-webkit-transition: margin, padding .0s linear;
 	   -moz-transition: margin, padding .0s linear;
@@ -91,7 +92,7 @@ $AnimDelay: 0s;
 	        transition: opacity   $AnimTime ease-in-out $AnimDelay,
 	        			transform $AnimTime ease-in-out $AnimDelay;
 
-	&.active-fx {
+	&._active-fx {
 		transform: translate(0px, 0px);
 		opacity: 1;
 	}
