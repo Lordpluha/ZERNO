@@ -3,9 +3,9 @@
 .header {
 	z-index: 1;
 	height: 100vh;
+	max-width: 100%;
 	@include adaptive-value('padding-top', 100, 120, 1);
 	@include adaptive-value('padding-top', 120, 140, 2);
-	overflow: hidden;
 
 	#content {
 		display: flex;
@@ -57,7 +57,7 @@
 		left: 50%;
 		transform: translateX(-34%);
 
-		.decoration__elem {		
+		.decoration__elem {
 			margin: 0 40px;
 			&:fist-of-type {
 				margin-left: 0;
@@ -86,9 +86,9 @@
 	overflow: hidden;
 	// padding: 28px 40px;
 	// .btn padding-top, padding-bottom
-	$btn-pt-b1: 10; 
-	$btn-pt-b2: 20; 
-	$btn-pt-b3: 28; 
+	$btn-pt-b1: 10;
+	$btn-pt-b2: 20;
+	$btn-pt-b3: 28;
 	@include adaptive-value('padding-top', $btn-pt-b1, $btn-pt-b2, 1);
 	@include adaptive-value('padding-top', $btn-pt-b2, $btn-pt-b3, 2);
 	@include adaptive-value('padding-bottom', $btn-pt-b1, $btn-pt-b2, 1);

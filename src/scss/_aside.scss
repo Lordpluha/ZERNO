@@ -1,21 +1,34 @@
 // Aside
 .aside {
 	width: 100%;
-	// display: none;
+}
 
+.distribution {
+	margin: 200px 0;
 	#content {
 		display: flex;
 		justify-content: flex-start;
 	}
-}
-.distribution {
-	margin: 200px 0;
+
 	// .distribution__leftside
 	&__leftside {
+		max-width: 50%;
+		@include adaptive-value('margin-right', 40, 100, 1);
+		@include adaptive-value('margin-right', 100, 100, 2);
+		overflow: hidden;
+	}
+	&__rightside {
 		width: 50%;
+		// *
+		overflow: hidden;
 	}
 	// .distribution__title
-	&__title {}
+	&__title {
+		// font-size: 5em;
+		@include adaptive-value('font-size', 40, 70, 1);
+		@include adaptive-value('font-size', 70, 100, 2);
+		word-break: keep-all;
+	}
 	// .distribution__paragraph
 	&__paragraph {
 		margin-top: 60px;
@@ -23,6 +36,8 @@
 		font-style: normal;
 		font-weight: 300;
 		font-size: 32px;
+		@include adaptive-value('font-size', 15, 32, 1);
+		@include adaptive-value('font-size', 32, 40, 2);
 		line-height: 39px;
 	}
 	// .distribution__form
@@ -31,9 +46,6 @@
 .distribution-form {
 	&:hover {
 		cursor: initial;
-	}
-	&>* {
-		display: block;
 	}
 	// .distribution-form__label
 	&__label {
@@ -72,9 +84,11 @@
 		line-height: 24px;
 		color: #FDFBFA;
 		width: 400px;
+		max-width: 90%;
 		background-color: $ThemeColor_Green;
 		padding: 10px 20px;
 		border-radius: 30px;
+
 		&::placeholder {
 			color: #FDFBFA;
 		}
@@ -83,7 +97,7 @@
 	&__checkbox {
 		display: none;
 		&:checked + label[for="politics"]::before {
-			background-image: url(../../img/aside/check.min.webp);
+			background-image: url(../img/aside/check.png);
 			background-repeat: no-repeat;
 			background-size: 60%;
 			background-position: center center;
