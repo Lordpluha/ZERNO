@@ -1,0 +1,109 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "sass:list";
+
+// Размер макета
+$MaketWidth: 1920;
+
+// Максимальный поддерживаемый размер сайта
+$SiteMaxWidth: 2560;
+
+// Максимальная ширина контентного блока
+$ContentMaxWidth: 1280;
+
+// Минимальная поддерживаемая ширина
+$SiteMinWidth: 320;
+
+$ThemeColor_Green: #929D7B;
+$BGC: #F5F5F5;
+$BGCA08: rgba(245, 245, 245, .8);
+$Orange: #E2704A;
+
+@import "_mixins.scss";
+@import "_zer0.scss";
+@import "_fonts.scss";
+@import "_media.scss";
+@import "_preloader.scss";
+
+* {
+	font-family: 'Ethna-Demo', sans-serif;
+	color: $ThemeColor_Green;
+}
+
+html {
+	/*
+	Элемент, отвечающий
+	за адаптивность шрифтов
+	всей страницы
+	*/
+	// font-style: 20px;
+	@include adaptive-value('font-size', 10, 17, 1);
+	@include adaptive-value('font-size', 15, 20, 2);
+	// @include adaptive-value('font-size', 10, 25, 3);
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+body {
+	background-color: $BGC;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#content {
+	display: block;
+	margin: 0 auto;
+	max-width: $ContentMaxWidth+px;
+	max-height: 100%;
+}
+
+
+// Красивая загрузка элементов (см. так же в script.js)
+$AnimTime: .6s;
+$AnimDelay: .1s;
+._anim-elem {
+	-webkit-transition: margin, padding .0s linear;
+	   -moz-transition: margin, padding .0s linear;
+	    -ms-transition: margin, padding .0s linear;
+	     -o-transition: margin, padding .0s linear;
+	        transition: margin, padding .0s linear;
+
+	-webkit-transform: translate(0, -100%);
+	   -moz-transform: translate(0, -100%);
+		-ms-transform: translate(0, -100%);
+		 -o-transform: translate(0, -100%);
+			transform: translate(0, -100%);
+
+	opacity: 0;
+
+	-webkit-transition: opacity   $AnimTime ease-in-out $AnimDelay,
+						transform $AnimTime ease-in-out $AnimDelay;
+	   -moz-transition: opacity   $AnimTime ease-in-out $AnimDelay,
+	   					transform $AnimTime ease-in-out $AnimDelay;
+	    -ms-transition: opacity   $AnimTime ease-in-out $AnimDelay,
+	    				transform $AnimTime ease-in-out $AnimDelay;
+	     -o-transition: opacity   $AnimTime ease-in-out $AnimDelay,
+	     				transform $AnimTime ease-in-out $AnimDelay;
+	        transition: opacity   $AnimTime ease-in-out $AnimDelay,
+	        			transform $AnimTime ease-in-out $AnimDelay;
+
+	&._active-fx {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+}
+
+@import "_header.scss";
+@import "_nav.scss";
+@import "_article.scss";
+@import "_aside.scss";
+@import "_footer.scss";
+
+
+

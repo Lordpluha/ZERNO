@@ -84,8 +84,10 @@ Thumbs.db
 *.sublime*
 .vscode
 
+.vscode/
+
 # Папка с собранными файлами проекта
-dist/
+dist/*
 
 # Файл конфигурации explorer.exe
 desktop.ini
@@ -93,5 +95,9 @@ desktop.ini
 # Сертификаты и доп. файлы
 *.key
 *.crt
+*.pem
 # *.conf
 *.htaccess
+
+# Dependency file
+package-lock.json
