@@ -1,2 +1,3 @@
 # ZERNO.layout
  ZERNO.layout
+ ONLY DESKTOP VERSION
